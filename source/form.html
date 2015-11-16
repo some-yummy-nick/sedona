@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Form-Sedona</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["PT Sans:400,700:cyrillic,latin"]
+      }
+    })
+  </script>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+
+
+
+  <div class="inner-wrapper">
+    <header class="header">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="">Карта штата</a>
+          </li>
+          <li class="menu__item">
+            <a href="">Информация</a>
+          </li>
+          <li class="menu__item  menu__item--none ">
+            <a href="">Информация</a>
+          </li>
+          <li class="menu__item">
+            <a href="">Фото и Видео</a>
+          </li>
+          <li class="menu__item">
+            <a href="">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="logo" href="">
+        <img src="" alt="logo" width="138" height="70">
+      </a>
+      <button class="toggle" type="button" name="button"></button>
+    </header>
+
+
+
+
+    <div class="intro">
+      <div class="intro__img">
+        <!-- <img src="" alt=""> -->
+      </div>
+    </div>
+
+
+
+
+    <div class="title">
+      <h1 class="title__caption">Оставьте свой отзыв</h1>
+      <p class="standart-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </div>
+
+
+
+
+    <form class="form" action="https://echo.htmlacademy.ru/adaptive">
+      <fieldset class="form__item">
+        <legend class="form__title">Представьтесь пожалуйста:</legend>
+        <label class="form__caption" for="family">Фамилия
+          <span class="form__star">*</span>
+        </label>
+        <input class="form__input" id="family" type="text" name="family" value="" placeholder="Иванов">
+        <label class="form__caption" for="name">Имя
+          <span class="form__star">*</span>
+        </label>
+        <input class="form__input" id="name" type="text" name="name" value="" placeholder="Петр">
+        <label class="form__caption" for="patronymic">Отчество</label>
+        <input class="form__input" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__title">Ваше общее впечатление:</legend>
+        <label class="form__caption" for="plus">
+          <input id="plus" type="radio" name="impress" value="Скорее положительное">Скорее положительное
+        </label>
+        <label class="form__caption" for="minus">
+          <input id="minus" type="radio" name="impress" value="Скорее отрицательное">Скорее отрицательное
+        </label>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__title">Даты вашей поездки:</legend>
+        <label class="form__caption" for="date-first">Дата приезда
+          <span class="form__star">*</span>
+        </label>
+        <input class="form__input" id="date-first" type="text" name="date-first" value="" placeholder="4 июля 2015">
+        <label class="form__caption" for="form__number1">Длительность пребывания
+          <span class="form__star">*</span>
+        </label>
+        <div class="form__counter">
+          <span class="form__minus">-</span>
+          <input class="form__number" id="form__number1" type="number" value="" placeholder="14" max="99">
+          <span class="form__crumb">дн.</span>
+          <span class="form__plus">+</span>
+        </div>
+        <label class="form__caption" for="date-second">Дата отъезда
+          <span class="form__star">*</span>
+        </label>
+        <input class="form__input" id="date-second" type="text" name="date-second" value="" placeholder="28 июля 2015">
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__title">Количество путешественников:</legend>
+        <label class="form__caption-second" for="form__number2">Количество путешественников
+          <span class="form__star">*</span>
+        </label>
+        <div class="form__counter">
+          <span class="form__minus">-</span>
+          <input class="form__number" id="form__number2" type="number" value="" placeholder="2" max="99">
+          <span class="form__crumb">чел.</span>
+          <span class="form__plus">+</span>
+        </div>
+        <ol class="username">
+          <li class="username__item">
+            <div class="username__field">
+              <label class="username__caption username__caption--family" for="">Фамилия
+                <span class="form__star">*</span>
+              </label>
+              <input class="username__input" type="text" name="family" value="" placeholder="Иванов">
+            </div>
+            <div class="username__field">
+              <label class="username__caption" for="">Имя
+                <span class="form__star">*</span>
+              </label>
+              <input class="username__input" type="text" name="name" value="" placeholder="Петр">
+            </div>
+            <div class="username__field">
+              <label class="username__caption" for="">Отчество</label>
+              <input class="username__input" type="text" name="patronymic" value="" placeholder="Александрович">
+            </div>
+          </li>
+          <li class="username__item">
+            <span class="username__block">№</span>
+            <div class="username__field">
+              <label class="username__caption" for="">Фамилия
+                <span class="form__star">*</span>
+              </label>
+              <input class="username__input" type="text" name="family" value="" placeholder="Иванов">
+            </div>
+            <div class="username__field">
+              <label class="username__caption" for="">Имя
+                <span class="form__star">*</span>
+              </label>
+              <input class="username__input" type="text" name="name" value="" placeholder="Петр">
+            </div>
+            <div class="username__field">
+              <label class="username__caption" for="">Отчество</label>
+              <input class="username__input" type="text" name="patronymic" value="" placeholder="Александрович">
+            </div>
+          </li>
+        </ol>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__title">Посещенные достопримечательности:</legend>
+        <label for="">Мост дьявола
+          <input class="checkbox" type="checkbox" name="name" value="" checked>
+        </label>
+        <label for="">Слайд-парк
+          <input class="checkbox" type="checkbox" name="name" value="">
+        </label>
+        <label for="">Гора-Колокол
+          <input class="checkbox" type="checkbox" name="name" value="" checked>
+        </label>
+        <label for="">Красные скалы
+          <input class="checkbox" type="checkbox" name="name" value="" checked>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__item">
+        <legend class="form__title">Загрузите фотографии:</legend>
+        <input class="file" type="file" name="file" id="file" multiple/>
+        <label class="file__label" for="file">Выбрать фотографии</label>
+        <div class="upload-images">
+          <ul class="upload-images__list"></ul>
+        </div>
+      </fieldset>
+
+      <input class="submit-form" type="submit" value="Отправить отзыв" id="submit">
+    </form>
+
+
+
+
+    <footer class="footer">
+      <div class="visit">#VisitSedona</div>
+      <div class="social">
+        <div class="social__item">
+          <a href=""></a>
+        </div>
+        <div class="social__item">
+          <a href=""></a>
+        </div>
+        <div class="social__item">
+          <a href=""></a>
+        </div>
+      </div>
+      <div class="copyright">
+        Разработано
+        <a href=""></a>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  <div class="popup popup--success" id="popupSuccess">
+    <h3 class="popup__caption">Ваша вызов отправлен</h3>
+    <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button class="popup__btn js-closePopup" type="button">Закрыть окно</button>
+  </div>
+  <div class=" popup  popup--failure" id="popupFailure">
+    <h3 class="popup__caption">Что-то пошло не так!</h3>
+    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="popup__btn js-closePopup" type="button">Oк</button>
+  </div>
+
+
+
+
+  <script id="image-template" type="text/html">
+    <div class="upload-images__img-wrap">
+      <img src="{{image}}" alt="{{name}}" title="{{name}}">
+
+      <button type="button" class="upload-images__del-link" title="Удалить">
+        <i>&times;</i>
+      </button>
+    </div>
+  </script>
+
+  <script id="username-template" type="text/html">
+    <span class="username__block">№</span>
+    <label class="username__caption" for="">Фамилия
+      <span class="star">*</span>
+      <input class="username__input" type="text" name="family" value="" placeholder="Иванов">
+    </label>
+    <label class="username__caption" for="">Имя
+      <span class="star">*</span>
+      <input class="username__input" type="text" name="name" value="" placeholder="Петр">
+    </label>
+    <label class="username__caption" for="">Отчество
+      <input class="username__input" type="text" name="patronymic" value="" placeholder="Александрович">
+    </label>
+  </script>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

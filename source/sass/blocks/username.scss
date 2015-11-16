@@ -1,0 +1,73 @@
+.username {
+  position: relative;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  counter-reset: myCounter;
+
+  &__field {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    &:first-of-type{
+      margin-left: 67px;
+    }
+  }
+  &__caption {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    &--family{
+      position: relative;
+      &:before{
+        content: "№";
+        display: inline-block;
+        left: -20%;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+  &__input {
+    display: block;
+    width: 213px;
+    padding: 10px;
+    line-height: 58px;
+    height: 58px;
+    background: $color-form;
+    border: none;
+    outline: none;
+  }
+  &__block {
+    position: absolute;
+    left: 10%;
+  }
+  &__item {
+    list-style: none;
+    position: relative;
+    margin-bottom: 30px;
+
+    &:before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      top: 28px;
+      line-height: 58px;
+      width: 61px;
+      height: 58px;
+      text-align: center;
+      background: $color-form;
+      @-moz-document url-prefix() {
+        top: 29px;
+      }
+    }
+  }
+  @media(min-width:$width-md) {
+    @extend %no-list;
+  }
+}

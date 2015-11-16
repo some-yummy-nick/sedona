@@ -1,0 +1,76 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-bottom: 0;
+  }
+  &__title {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  &__item {
+    padding: 40px;
+    padding-bottom: 0;
+    &--line {
+      background: $color-wan;
+      &:last-child {
+        padding-bottom: 40px;
+      }
+    }
+    &--blue {
+      background: $color-blue;
+      color: #fff;
+      padding-bottom: 40px;
+    }
+    &--image {
+      padding: 0;
+    }
+    &--reverse {
+      margin-top: 40px;
+    }
+  }
+  &__icon{
+    width: 75px;
+    height: 73px;
+    fill:$color-blue;
+  }
+  @media(min-width:$width-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__title {
+      font-size: 21px;
+      width: 130px;
+      margin: auto;
+    }
+    &__item {
+      padding: 50px;
+      width: 33.33%;
+      &--image {
+        width: 66.67%;
+        padding: 0;
+        &--reverse {
+          order: 2;
+        }
+      }
+      &--photo-city {
+        background: url("../img/photo-city@1x.jpg") no-repeat;
+      }
+    &--photo-bridge{
+        background: url("../img/photo-bridge@1x.jpg") no-repeat;
+      }
+      &--present {
+        order: 1;
+      }
+      &--reverse {
+        margin-top: 0;
+        order: 3;
+      }
+      &--line {
+        order: 4;
+        &:last-child {
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+}

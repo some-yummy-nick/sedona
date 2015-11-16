@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  color: #000;
+    @media(min-width:$width-md) {
+flex-direction: row;
+padding-bottom: 0;
+    }
+}
+.social,
+.copyright,
+.visit {
+  padding: 40px;
+  padding-bottom: 0;
+  @media(min-width:$width-md) {
+    padding: 50px;
+    width: 33.33%;
+  }
+}
+.visit {
+  font-size: 21px;
+  font-weight: 700;
+}

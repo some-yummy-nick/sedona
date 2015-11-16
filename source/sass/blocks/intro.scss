@@ -1,0 +1,36 @@
+.intro {
+  position: relative;
+  background:#e1eff8 url("../img/intro-triangle.svg") no-repeat 50% 100% ,url("../img/photo-background@1x.jpg") no-repeat;
+  background-size:auto,cover;
+  min-height: 300px;
+  padding-top: 30px;
+z-index: 1;
+  @media(min-width:$width-lg) {
+    min-height: 800px;
+  }
+  &__welcome {
+    fill: $color-blue;
+    width: 196px;
+    height: 66px;
+  }
+  &__tothegorgeous{
+    margin-top: -50px;
+    fill:#766357;
+  }
+  &__sedona{
+    fill:#fff;
+    margin-top: -30px;
+  }
+  &__becausecanyon{
+    fill:#fff;
+    margin-top: -25px;
+  }
+  @media(min-width:$width-md) {
+    min-height: 512px;
+    padding-top: 60px;
+    &__welcome {
+      width: 256px;
+      height: 86px;
+    }
+  }
+}

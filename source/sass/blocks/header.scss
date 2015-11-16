@@ -1,0 +1,99 @@
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  &--toggle{
+    min-height: 60px;
+  }
+  @media(min-width:$width-md) {
+    min-height: inherit;
+  }
+}
+.menu {
+  &__list {
+    @extend %no-list;
+    @media(min-width:$width-md) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+  &--hide-block{
+    display: none;
+  }
+  &__item {
+    height: 55px;
+    background: $color-blue;
+    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 55px;
+    }
+    &--none {
+      display: none;
+    }
+    @media(min-width:$width-md) {
+      background: #fff;
+      box-shadow: none;
+      margin-right: 30px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        color: #000;
+      }
+      &--none {
+        display: block;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.logo {
+  display: block;
+  position: absolute;
+  width: 138px;
+  height: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../img/logo-triangle.svg") no-repeat 50% 0;
+  background-color: transparent;
+  z-index: 2;
+  @media(min-width:$width-md) {
+    width: 138px;
+    background-color: transparent;
+    top: 0;
+  }
+}
+.toggle {
+  &__icon,
+  &__iconclose {
+    position: absolute;
+    top: 238px;
+    right: 20px;
+    width: 50px;
+    height: 24px;
+  }
+  &__icon {
+    fill: $color-blue;
+    &--block-menu{
+      top: 15px;
+    }
+  }
+  &__iconclose {
+    top: 15px;
+    fill: #fff;
+    z-index: 3;
+    &--hide-menu{
+      display: none;
+    }
+  }
+  @media(min-width:$width-md) {
+    display: none;
+  }
+}
