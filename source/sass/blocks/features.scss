@@ -1,6 +1,7 @@
 .features {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   p {
     margin-bottom: 0;
   }
@@ -11,14 +12,58 @@
   &__item {
     padding: 40px;
     padding-bottom: 0;
+    &--triangle {
+      position: relative;
+      padding-top: 70px;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 57px;
+        z-index: 1;
+        background: url(../img/intro-triangle--blue.svg) no-repeat 50% 0;
+        background-size: auto;
+        z-index: 2;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 57px;
+        z-index: 1;
+        background: #fff;
+      }
+    }
     &--line {
+      position: relative;
       background: $color-wan;
+      padding-bottom: 40px;
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        background: #d6d6d6;
+        width: 280px;
+        height: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
       &:last-child {
         padding-bottom: 40px;
+        &:after {
+          display: none;
+        }
       }
     }
     &--blue {
-      background: $color-blue;
+      background-color: $color-blue;
       color: #fff;
       padding-bottom: 40px;
     }
@@ -29,10 +74,10 @@
       margin-top: 40px;
     }
   }
-  &__icon{
+  &__icon {
     width: 75px;
     height: 73px;
-    fill:$color-blue;
+    fill: $color-blue;
   }
   @media(min-width:$width-md) {
     flex-direction: row;
@@ -45,6 +90,13 @@
     &__item {
       padding: 50px;
       width: 33.33%;
+      &--triangle {
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
       &--image {
         width: 66.67%;
         padding: 0;
@@ -53,10 +105,10 @@
         }
       }
       &--photo-city {
-        background: url("../img/photo-city@1x.jpg") no-repeat;
+        background: url(../img/photo-city@1x.jpg) no-repeat;
       }
-    &--photo-bridge{
-        background: url("../img/photo-bridge@1x.jpg") no-repeat;
+      &--photo-bridge {
+        background: url(../img/photo-bridge@1x.jpg) no-repeat;
       }
       &--present {
         order: 1;
@@ -69,6 +121,9 @@
         order: 4;
         &:last-child {
           padding-bottom: 50px;
+        }
+        &:after {
+          display: none;
         }
       }
     }

@@ -3,10 +3,10 @@
   flex-direction: column;
   padding-bottom: 40px;
   color: #000;
-    @media(min-width:$width-md) {
-flex-direction: row;
-padding-bottom: 0;
-    }
+  @media(min-width:$width-md) {
+    flex-direction: row;
+    padding-bottom: 0;
+  }
 }
 .social,
 .copyright,
@@ -21,4 +21,42 @@ padding-bottom: 0;
 .visit {
   font-size: 21px;
   font-weight: 700;
+}
+.social {
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    background-color: $color-blue;
+    width: 46px;
+    height: 48px;
+    &-svg{
+      width: 9px;
+      height: 19px;
+      fill:#fff;
+      margin-top: 12px;
+      &--twitter{
+        width: 17px;
+        height: 15px;
+        margin-top: 15px;
+      }
+      &--youtube{
+        width: 19px;
+        height: 14px;
+          margin-top: 15px;
+      }
+    }
+  }
+}
+.copyright{
+  a{
+display: inline-block;
+vertical-align: middle;
+width: 27px;
+height: 34px;
+  }
+  &__htmlacademy{
+    width: 27px;
+    height: 34px;
+  }
 }
