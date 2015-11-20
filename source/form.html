@@ -13,6 +13,7 @@
       }
     })
   </script>
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -163,30 +164,30 @@
       <fieldset class="form__item">
         <legend class="form__title">Представьтесь пожалуйста:</legend>
         <div class="form__block">
-        <label class="form__caption" for="family">Фамилия
-          <span class="form__star">*</span>
-        </label>
-        <input class="form__input" id="family" type="text" name="family" value="" placeholder="Иванов">
+          <label class="form__caption" for="family">Фамилия
+            <span class="form__star">*</span>
+          </label>
+          <input class="form__input" id="family" type="text" name="family" value="" placeholder="Иванов">
         </div>
         <div class="form__block">
-        <label class="form__caption" for="name">Имя
-          <span class="form__star">*</span>
-        </label>
-        <input class="form__input" id="name" type="text" name="name" value="" placeholder="Петр">
-      </div>
-      <div class="form__block">
-        <label class="form__caption" for="patronymic">Отчество</label>
-        <input class="form__input" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
-      </div>
+          <label class="form__caption" for="name">Имя
+            <span class="form__star">*</span>
+          </label>
+          <input class="form__input" id="name" type="text" name="name" value="" placeholder="Петр">
+        </div>
+        <div class="form__block">
+          <label class="form__caption" for="patronymic">Отчество</label>
+          <input class="form__input" type="text" id="patronymic" name="patronymic" value="" placeholder="Александрович">
+        </div>
       </fieldset>
 
       <fieldset class="form__item">
         <legend class="form__title">Ваше общее впечатление:</legend>
-        <label class="form__caption" for="plus">
-          <input id="plus" type="radio" name="impress" value="Скорее положительное">Скорее положительное
+        <label class="form__caption  form__radio-label" for="plus">
+          <input class="form__radio" id="plus" type="radio" name="impress" value="Скорее положительное">Скорее положительное
         </label>
-        <label class="form__caption" for="minus">
-          <input id="minus" type="radio" name="impress" value="Скорее отрицательное">Скорее отрицательное
+        <label class="form__caption  form__radio-label" for="minus">
+          <input class="form__radio"  id="minus" type="radio" name="impress" value="Скорее отрицательное">Скорее отрицательное
         </label>
       </fieldset>
 
