@@ -23,6 +23,8 @@
   font-weight: 700;
 }
 .social {
+  padding-left: 0;
+  padding-right: 0;
   &__item {
     display: inline-block;
     vertical-align: top;
@@ -30,6 +32,9 @@
     background-color: $color-blue;
     width: 46px;
     height: 48px;
+    &:last-child{
+      margin-right: 0;
+    }
     &-svg{
       width: 9px;
       height: 19px;

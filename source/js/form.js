@@ -87,15 +87,15 @@
       });
       li.parentNode.removeChild(li);
     }
-    var elements = document.querySelectorAll(".form-counter");
+    var elements = document.querySelectorAll(".form__counter");
     for (var i = 0; i < elements.length; i++) {
       initNumberField(elements[i]);
     }
 
     function initNumberField(parent) {
-      var input = parent.querySelector("input");
-      var minus = parent.querySelector(".form-counter__btn--minus");
-      var plus = parent.querySelector(".form-counter__btn--plus");
+      var input = parent.querySelector(".form__number");
+      var minus = parent.querySelector(".form__minus");
+      var plus = parent.querySelector(".form__plus");
 
       minus.addEventListener("click", function(e) {
         e.preventDefault();

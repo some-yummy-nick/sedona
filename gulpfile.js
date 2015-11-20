@@ -20,7 +20,7 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin'),
     path = require('path');
 
-gulp.task('default', ['sass', 'html', 'js', 'browser-sync', 'watch', 'image'], function () {});
+gulp.task('default', ['sass','html', 'js', 'browser-sync', 'watch', 'image'], function () {});
 
 gulp.task('sass', function () {
     gulp.src('source/sass/style.scss')
@@ -40,7 +40,6 @@ gulp.task('sass', function () {
             stream: true
         }));
 });
-
 gulp.task('html', function () {
     return gulp.src('source/*.html')
         .pipe(changed('build/'))

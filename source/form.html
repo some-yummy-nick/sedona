@@ -181,35 +181,43 @@
         </div>
       </fieldset>
 
-      <fieldset class="form__item">
+      <fieldset class="form__item  form__item--top">
         <legend class="form__title">Ваше общее впечатление:</legend>
-        <label class="form__caption  form__radio-label" for="plus">
-          <input class="form__radio" id="plus" type="radio" name="impress" value="Скорее положительное">Скорее положительное
-        </label>
-        <label class="form__caption  form__radio-label" for="minus">
-          <input class="form__radio"  id="minus" type="radio" name="impress" value="Скорее отрицательное">Скорее отрицательное
-        </label>
+        <div class="form__wrapper">
+          <input class="form__radio" id="plus" type="radio" name="impress" value="Скорее положительное" checked="checked">
+          <label class="form__caption  form__caption--bold form__caption--radio" for="plus">Скорее положительное</label>
+        </div>
+        <div class="form__wrapper">
+          <input class="form__radio" id="minus" type="radio" name="impress" value="Скорее отрицательное">
+          <label class="form__caption form__caption--bold form__caption--radio" for="minus">Скорее отрицательное</label>
+        </div>
       </fieldset>
 
-      <fieldset class="form__item">
+      <fieldset class="form__item  form__item--top">
         <legend class="form__title">Даты вашей поездки:</legend>
-        <label class="form__caption" for="date-first">Дата приезда
-          <span class="form__star">*</span>
-        </label>
-        <input class="form__input" id="date-first" type="text" name="date-first" value="" placeholder="4 июля 2015">
-        <label class="form__caption" for="form__number1">Длительность пребывания
-          <span class="form__star">*</span>
-        </label>
-        <div class="form__counter">
-          <span class="form__minus">-</span>
-          <input class="form__number" id="form__number1" type="number" value="" placeholder="14" max="99">
-          <span class="form__crumb">дн.</span>
-          <span class="form__plus">+</span>
+        <div class="form__wrapper">
+          <label class="form__caption  form__caption--date" for="date-first">Дата приезда
+            <span class="form__star">*</span>
+          </label>
+          <input class="form__input" id="date-first" type="text" name="date-first" value="" placeholder="4 июля 2015">
         </div>
-        <label class="form__caption" for="date-second">Дата отъезда
-          <span class="form__star">*</span>
-        </label>
-        <input class="form__input" id="date-second" type="text" name="date-second" value="" placeholder="28 июля 2015">
+        <div class="form__wrapper">
+          <label class="form__caption  form__caption--counter " for="form__number1">Длительность пребывания
+            <span class="form__star">*</span>
+          </label>
+          <div class="form__counter">
+            <span class="form__minus">-</span>
+            <input class="form__number" id="form__number1" type="number" value="" placeholder="14" max="99">
+            <span class="form__crumb">дн.</span>
+            <span class="form__plus">+</span>
+          </div>
+        </div>
+        <div class="form__wrapper">
+          <label class="form__caption  form__caption--date" for="date-second">Дата отъезда
+            <span class="form__star">*</span>
+          </label>
+          <input class="form__input" id="date-second" type="text" name="date-second" value="" placeholder="28 июля 2015">
+        </div>
       </fieldset>
 
       <fieldset class="form__item">
@@ -266,30 +274,38 @@
 
       <fieldset class="form__item">
         <legend class="form__title">Посещенные достопримечательности:</legend>
-        <label for="">Мост дьявола
-          <input class="checkbox" type="checkbox" name="name" value="" checked>
-        </label>
-        <label for="">Слайд-парк
-          <input class="checkbox" type="checkbox" name="name" value="">
-        </label>
-        <label for="">Гора-Колокол
-          <input class="checkbox" type="checkbox" name="name" value="" checked>
-        </label>
-        <label for="">Красные скалы
-          <input class="checkbox" type="checkbox" name="name" value="" checked>
-        </label>
+        <div class="form__center">
+          <div class="form__wrapper form__wrapper--checkbox">
+            <input class="form__checkbox" id="Attraction1" type="checkbox" name="Attraction1" value="Мост дьявола" checked>
+            <label class="form__caption form__caption--bold form__caption--checkbox" for="Attraction1">Мост дьявола</label>
+          </div>
+          <div class="form__wrapper  form__wrapper--checkbox">
+            <input class="form__checkbox" id="Attraction2" type="checkbox" name="Attraction2" value="">
+            <label class="form__caption form__caption--bold form__caption--checkbox" for="Attraction2">Слайд-парк</label>
+          </div>
+          <div class="form__wrapper  form__wrapper--checkbox">
+            <input class="form__checkbox" id="Attraction3" type="checkbox" name="Attraction3" value="" checked>
+            <label class="form__caption form__caption--bold form__caption--checkbox" for="Attraction3">Гора-Колокол </label>
+          </div>
+          <div class="form__wrapper  form__wrapper--checkbox">
+            <input class="form__checkbox" id="Attraction4" type="checkbox" name="Attraction4" value="" checked>
+            <label class="form__caption form__caption--bold form__caption--checkbox" for="Attraction4">Красные скалы </label>
+          </div>
+        </div>
       </fieldset>
 
-      <fieldset class="form__item">
+      <fieldset class="form__item  form__item--bottom">
         <legend class="form__title">Загрузите фотографии:</legend>
         <input class="file" type="file" name="file" id="file" multiple/>
-        <label class="file__label" for="file">Выбрать фотографии</label>
+        <label class="file__label" for="file">Выбрать фотографии
+          <span>Перетащите фотографии сюда</span>
+        </label>
         <div class="upload-images">
           <ul class="upload-images__list"></ul>
         </div>
       </fieldset>
 
-      <input class="submit-form" type="submit" value="Отправить отзыв" id="submit">
+      <input class="form__submit" type="submit" value="Отправить отзыв" id="submit">
     </form>
 
 
@@ -347,23 +363,30 @@
       <img src="{{image}}" alt="{{name}}" title="{{name}}">
 
       <button type="button" class="upload-images__del-link" title="Удалить">
-        <i>&times;</i>
+        <svg class="upload-images__del-link-svg">
+          <use xlink:href="#menu-cross"></use>
+        </svg>
       </button>
     </div>
   </script>
 
   <script id="username-template" type="text/html">
-    <span class="username__block">№</span>
-    <label class="username__caption" for="">Фамилия
-      <span class="star">*</span>
+    <div class="username__field">
+      <label class="username__caption username__caption--family" for="">Фамилия
+        <span class="form__star">*</span>
+      </label>
       <input class="username__input" type="text" name="family" value="" placeholder="Иванов">
-    </label>
-    <label class="username__caption" for="">Имя
-      <span class="star">*</span>
+    </div>
+    <div class="username__field">
+      <label class="username__caption" for="">Имя
+        <span class="form__star">*</span>
+      </label>
       <input class="username__input" type="text" name="name" value="" placeholder="Петр">
-    </label>
-    <label class="username__caption" for="">Отчество
+    </div>
+    <div class="username__field">
+      <label class="username__caption" for="">Отчество</label>
       <input class="username__input" type="text" name="patronymic" value="" placeholder="Александрович">
+    </div>
     </label>
   </script>
   <script src="js/script.min.js"></script>

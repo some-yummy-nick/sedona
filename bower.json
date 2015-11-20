@@ -1,6 +1,5 @@
 {
   "name": "sedona",
-  "description": "Обучающий проект «sedona» от HTML Academy",
   "main": "gulpfile.js",
   "authors": [
     "Марат Шаймарданов"
@@ -15,10 +14,4 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "moment": "~2.10.6",
-    "mustache.js": "mustache#~2.2.0",
-    "tap": "~1.0.7"
-  },
-  "devDependencies": {}
 }
