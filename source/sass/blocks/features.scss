@@ -128,4 +128,16 @@
       }
     }
   }
+  @media (min-resolution: 1.5dppx) {
+    &__item {
+    &--photo-city {
+      background: url(../img/photo-city@2x.jpg) no-repeat;
+      background-size: cover;
+    }
+    &--photo-bridge {
+      background: url(../img/photo-bridge@2x.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
 }
