@@ -1,11 +1,13 @@
 .intro {
   position: relative;
-  background: #e1eff8 url(../img/intro-triangle.svg) no-repeat 50% 100% ,url("../img/photo-background@1x.jpg") no-repeat 50%;
-  background-size: auto,cover;
+  background-image: url("../img/intro-triangle.svg"), url("../img/photo-background@1x.jpg");
+  background-position:50% 100%, 50%;
+  background-repeat: no-repeat;
+  background-color:#e1eff8;
+  background-size: auto, cover;
   min-height: 300px;
   padding-top: 30px;
   z-index: 1;
-
   &__welcome {
     fill: $color-blue;
     width: 196px;
@@ -27,9 +29,8 @@
     }
   }
   @media (min-resolution: 1.5dppx) {
-    background: #e1eff8 url(../img/intro-triangle.svg) no-repeat 50% 100% ,url("../img/photo-background@2x.jpg") no-repeat 50%;
+    background: #e1eff8 url("../img/intro-triangle.svg") no-repeat 50% 100%, url("../img/photo-background@2x.jpg") no-repeat 50%;
   }
-
   @media(min-width:$width-md) {
     min-height: 512px;
     padding-top: 60px;

@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     csscomb = require('gulp-csscomb'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
-    minifyCss = require('gulp-minify-css'),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
     postcss = require('gulp-postcss'),
@@ -14,10 +13,12 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    clean = require('gulp-clean'),
     changed = require('gulp-changed'),
     concat = require('gulp-concat'),
     htmlmin = require('gulp-htmlmin'),
+    rigger = require('gulp-rigger'),
+    rimraf = require('rimraf'),
+    nano = require('gulp-cssnano'),
     path = require('path');
 
 gulp.task('default', ['sass','html', 'js', 'browser-sync', 'watch', 'image'], function () {});
@@ -31,9 +32,7 @@ gulp.task('sass', function () {
         })]))
         .pipe(csscomb())
         .pipe(gulp.dest('build/css'))
-        .pipe(minifyCss({
-            compatibility: 'ie8'
-        }))
+        .pipe(nano())
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('build/css/'))
         .pipe(reload({
@@ -43,6 +42,7 @@ gulp.task('sass', function () {
 gulp.task('html', function () {
     return gulp.src('source/*.html')
         .pipe(changed('build/'))
+        .pipe(rigger())
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -108,9 +108,6 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('clean', function () {
-    return gulp.src('build', {
-            read: false
-        })
-        .pipe(clean());
+gulp.task('clean', function (cb) {
+    rimraf('./build', cb);
 });
