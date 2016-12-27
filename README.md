@@ -1,4 +1,4 @@
-http://yeffasol.github.io/Sedona/
+http://yeffasol.github.io/sedona/
 
 1.npm i
 
